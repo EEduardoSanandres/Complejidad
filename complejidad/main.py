@@ -1,7 +1,6 @@
 import csv
 import networkx as nx
 import matplotlib.pyplot as plt
-from itertools import combinations
 
 # Define la clase Pelicula
 class Pelicula:
@@ -14,7 +13,8 @@ class Pelicula:
 
 def leer_peliculas():
     # Abre el archivo CSV con la codificación UTF-8
-    with open('database.csv', 'r', encoding='UTF-8') as csvfile:
+    # ADVERTENCIA: Modificar la ruta del dataset de ser necesario
+    with open('complejidad\database.csv', 'r', encoding='UTF-8') as csvfile:
         # Crea un objeto reader
         reader = csv.reader(csvfile)
         # Crea un grafo vacío
@@ -182,6 +182,8 @@ def imprimir_peliculas(G):
 
 # Lee las películas desde el archivo CSV
 G = leer_peliculas()
+
+## PRUEBAS DE GRAFO
 
 # Prueba 1: Diez primero nodos
 # dibujar_grafo(G)
